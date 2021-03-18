@@ -1,0 +1,25 @@
+import random
+
+while True:
+    user_action = input("Enter a choise (rock, paper, scissors): ")
+    possible_action = ["rock", "paper", "scissors"]
+    computer_action = random.choice(possible_action)
+    print(f"You chose {user_action}, computer chose {computer_action}")
+
+    if user_action == computer_action:
+        print(f"Both players selected {user_action}. It's a tie!!!")
+    elif user_action == "rock":
+        if computer_action == "scissors":
+            print("Rock smashes scissors!!! YOU WIN!")
+        else:
+            print("Paper cover rock!!! YOU LOSE!")
+    elif user_action == "paper":
+        if computer_action == "rock":
+            print("Paper cover rock!!! YOU WIN!")
+        else:
+            print("Scissors cuts paper!!! YOU LOSE!")
+    elif user_action == "scissors":
+        if computer_action == "paper":
+            print("Scissors cuts paper!!! YOU WIN!")
+        else:
+            print("Rock smashes scissors!!! YOU LOSE!")
